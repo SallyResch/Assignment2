@@ -4,10 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Main menu. Please enter selected number for wanted action: ");
-            
-            
-            Console.WriteLine("0. Exit program");
+
+            Console.WriteLine("Welcome to Main menu. Please enter selected number for wanted action:" +
+                "\n1. Buy movietickets " +
+                "\n2. You want to repeat yourself " +
+                "\n3. Play the third word-Game " +
+                "\n0. Exit application");
 
             string selectedAction = Console.ReadLine();
 
