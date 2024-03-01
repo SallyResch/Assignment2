@@ -1,10 +1,11 @@
-﻿namespace Assignment2
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Assignment2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-
             //Menu creation
             Console.WriteLine("Welcome to Main menu. Please enter selected number for wanted action:" +
                "\n1. Buy movietickets " +
@@ -18,7 +19,10 @@
                 switch (selectedAction)
                 {
                     case "1":
-                        Console.WriteLine("Number one");
+                        Console.WriteLine("Please enter your age: ");
+                        int.TryParse(Console.ReadLine(), out int age);
+                        int price = AgeCheck(age);
+                        Console.WriteLine($"The ticketprice for you is: {price}");
                         break;
                     case "2":
                         Console.WriteLine("Number two");
@@ -39,8 +43,25 @@
                "\n3. Play the third word-Game " +
                "\n0. Exit application");
                 selectedAction = Console.ReadLine();
+            }     
+        }
+        //Checking the age to set the price on movie ticket
+        static int AgeCheck(int age)
+        {
+            if (age < 20)
+            {
+                return 80;
             }
-           
+            else if (age > 64)
+            {
+                return 90;
+            }
+            else
+            {
+                return 120;
+            }
+
+
         }
     }
 }
