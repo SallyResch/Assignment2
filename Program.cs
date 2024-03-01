@@ -22,7 +22,7 @@ namespace Assignment2
                         Console.WriteLine("Please enter your age: ");
                         int.TryParse(Console.ReadLine(), out int age);
                         int price = AgeCheck(age);
-                        Console.WriteLine($"The ticketprice for you is: {price}");
+                        Console.WriteLine($"The ticketprice for your age is: {price}kr");
                         break;
                     case "2":
                         Console.WriteLine("Number two");
@@ -45,7 +45,7 @@ namespace Assignment2
                 selectedAction = Console.ReadLine();
             }     
         }
-        //Checking the age to set the price on movie ticket
+        //Checking the age of User to set the price on movieticket in case 1
         static int AgeCheck(int age)
         {
             if (age < 20)
@@ -60,8 +60,15 @@ namespace Assignment2
             {
                 return 120;
             }
+        }
 
+        //Count total cost of tickets for the group of people going to the movies together
+        //first ask for every persons age and add every result of the price/person to the total of ticketcost
+        //Then print the totalticketcost in the console to the user.
 
+        static int TotalTicketCost(int totalTicketCost) 
+        {
+            return totalTicketCost;
         }
     }
 }
