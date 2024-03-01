@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
 
-
+            //Menu creation
             Console.WriteLine("Welcome to Main menu. Please enter selected number for wanted action:" +
                "\n1. Buy movietickets " +
                "\n2. You want to repeat yourself " +
@@ -13,7 +13,7 @@
                "\n0. Exit application");
             string selectedAction = Console.ReadLine();
 
-            //Menu creation
+            //While loop to make menu stay even if the user made an action, unless user chooses 0
             while (selectedAction != "0") {
                 switch (selectedAction)
                 {
