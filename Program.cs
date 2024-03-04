@@ -29,10 +29,20 @@ namespace Assignment2
                         Console.WriteLine($"The total cost of movietickets is: {totalCost + price}");
                         break;
                     case "2":
-                        Console.WriteLine("Number two");
+                        Console.WriteLine("Write a scentence:");
+                        string scentence = Console.ReadLine();
+                        for (int i = 0; i < 10;i++)
+                        {
+                            Console.Write($"{i + 1}: {scentence} ");
+                            
+                        }
+                        Console.WriteLine(" ");
                         break;
                     case "3":
-                        Console.WriteLine("Number three");
+                        Console.WriteLine("Find the third word in a scentence");
+                        Console.WriteLine("Write your scentence: ");
+                        string userInput = Console.ReadLine();
+                        WordCount(userInput);
                         break;
                     case "0":
                         Console.WriteLine("Exiting application");
@@ -49,17 +59,25 @@ namespace Assignment2
                 selectedAction = Console.ReadLine();
             }     
         }
+        //CASE 1 METHODS:
         //Checking the age of User to set the price on movieticket in case 1
         static int AgeCheck(int age)
         {
-            if (age < 20)
+           
+            if (age < 5 || age > 100)
+            {
+                Console.WriteLine("its free of charge for you youngsters");
+                return 0;
+            }
+            else if (age < 20)
             {
                 return 80;
             }
-            else if (age > 64)
+            else if (age >64)
             {
                 return 90;
             }
+           
             else
             {
                 return 120;
@@ -85,5 +103,25 @@ namespace Assignment2
             }
             return totalTicketCost;
         }
+
+        //CASE 3 METHOD
+        //Checking amount of words so that is not less then 3 and takes out the third word and writes it to the console.
+        //For loop
+        static void WordCount(string input)
+        {
+            string[] words = input.Split(' ');
+
+            if (words.Length >= 3)
+            {
+                string thirdWord = words[2];
+                Console.WriteLine("The third word is: " + thirdWord);
+            }
+            else
+            {
+                Console.WriteLine("You entered too few words in the sentence. Please enter 3 or more words.");
+            }
+            
+        }
+
     }
 }
