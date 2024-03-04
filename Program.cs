@@ -67,7 +67,7 @@ namespace Assignment2
         }
 
         //Count total cost of tickets for the group of people going to the movies together
-        //first ask for every persons age and add every result of the price/person to the total of ticketcost
+        //First ask for every persons age and add every result of the price/person to the total of ticket cost
         //Then print the totalticketcost in the console to the user.
 
         static int TotalTicketCost(int numberOfPeople)
