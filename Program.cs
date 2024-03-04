@@ -23,10 +23,10 @@ namespace Assignment2
                         int.TryParse(Console.ReadLine(), out int age);
                         int price = AgeCheck(age);
                         Console.WriteLine($"The ticketprice for your age is: {price}kr");
-                        Console.WriteLine("Enter the number of people going to the movies:");
+                        Console.WriteLine("Enter the number of people going to the movies with you:");
                         int numberOfPeople = int.Parse(Console.ReadLine());
                         int totalCost = TotalTicketCost(numberOfPeople);
-                        Console.WriteLine($"The total cost of movietickets is: {totalCost}kr");
+                        Console.WriteLine($"The total cost of movietickets is: {totalCost + price}");
                         break;
                     case "2":
                         Console.WriteLine("Number two");
