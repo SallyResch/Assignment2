@@ -23,6 +23,10 @@ namespace Assignment2
                         int.TryParse(Console.ReadLine(), out int age);
                         int price = AgeCheck(age);
                         Console.WriteLine($"The ticketprice for your age is: {price}kr");
+                        Console.WriteLine("Enter the number of people going to the movies:");
+                        int numberOfPeople = int.Parse(Console.ReadLine());
+                        int totalCost = TotalTicketCost(numberOfPeople);
+                        Console.WriteLine($"The total cost of movietickets is: {totalCost}kr");
                         break;
                     case "2":
                         Console.WriteLine("Number two");
@@ -66,8 +70,19 @@ namespace Assignment2
         //first ask for every persons age and add every result of the price/person to the total of ticketcost
         //Then print the totalticketcost in the console to the user.
 
-        static int TotalTicketCost(int totalTicketCost) 
+        static int TotalTicketCost(int numberOfPeople)
         {
+            int totalTicketCost = 0;
+
+            for (int i = 1; i <= numberOfPeople; i++)
+            {
+                Console.WriteLine($"Enter age of person {i}:");
+                int age = int.Parse(Console.ReadLine());
+
+                int ticketPrice = AgeCheck(age);
+                totalTicketCost += ticketPrice;
+
+            }
             return totalTicketCost;
         }
     }
