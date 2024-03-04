@@ -29,10 +29,17 @@ namespace Assignment2
                         Console.WriteLine($"The total cost of movietickets is: {totalCost + price}");
                         break;
                     case "2":
-                        Console.WriteLine("Number two");
+                        Console.WriteLine("Write a scentence:");
+                        string scentence = Console.ReadLine();
+                        for (int i = 0; i < 10;i++)
+                        {
+                            Console.Write($"{i + 1}: {scentence} ");
+                            
+                        }
+                        Console.WriteLine(" ");
                         break;
                     case "3":
-                        Console.WriteLine("Number three");
+                        Console.WriteLine("Find the third word in a scentence");
                         break;
                     case "0":
                         Console.WriteLine("Exiting application");
@@ -49,6 +56,7 @@ namespace Assignment2
                 selectedAction = Console.ReadLine();
             }     
         }
+        //CASE 1 METHODS:
         //Checking the age of User to set the price on movieticket in case 1
         static int AgeCheck(int age)
         {
@@ -85,5 +93,7 @@ namespace Assignment2
             }
             return totalTicketCost;
         }
+
+        //CASE 2 METHODS:
     }
 }
