@@ -29,7 +29,7 @@ namespace Assignment2
                         Console.WriteLine($"The total cost of movietickets is: {totalCost + price}");
                         break;
                     case "2":
-                        Console.WriteLine("Write a scentence:");
+                        Console.WriteLine("Write a word or scentence:");
                         string scentence = Console.ReadLine();
                         for (int i = 0; i < 10;i++)
                         {
@@ -71,15 +71,17 @@ namespace Assignment2
             }
             else if (age < 20)
             {
+                Console.WriteLine("Price for your age is 80kr");
                 return 80;
             }
-            else if (age >64)
+            else if (age > 64)
             {
+                Console.WriteLine("Price for your age is 90kr");
                 return 90;
             }
-           
             else
             {
+                Console.WriteLine("Price for your age is 120kr");
                 return 120;
             }
         }
@@ -116,10 +118,15 @@ namespace Assignment2
                 string thirdWord = words[2];
                 Console.WriteLine("The third word is: " + thirdWord);
             }
-            else
+            else if(words.Length < 3)
             {
                 Console.WriteLine("You entered too few words in the sentence. Please enter 3 or more words.");
             }
+            else
+            {
+                Console.WriteLine("Thank you for playing");
+            }
+            
             
         }
 
